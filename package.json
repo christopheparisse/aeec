@@ -1,0 +1,60 @@
+{
+  "name": "aeec",
+  "productName": "AEEC",
+  "version": "0.6.0",
+  "description": "Agrégation, édition et exploration de corpus de langage oral",
+  "main": "aeec.js",
+  "scripts": {
+    "start": "gulp src ; electron aeec.js",
+    "trjs": "electron index.js",
+    "aeec": "electron aeec.js",
+    "avcvt": "node tools/avcvt.js",
+    "teicvt": "node tools/teicvt.js",
+    "build": "gulp src",
+    "html": "gulp html",
+    "webpack": "webpack --target node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "parisse@ct3.ortolang.fr:/applis/devlopt/aeec.git"
+  },
+  "keywords": [
+    "aeec",
+    "electron",
+    "transcription editing",
+    "corpus aggregator"
+  ],
+  "author": "Christophe Parisse",
+  "license": "CC-BY-1.0",
+  "bugs": {
+    "url": "http://ct3.ortolang.fr/tools/mantisbt/"
+  },
+  "homepage": "http://ct3.ortolang.fr/aeec",
+  "dependencies": {
+    "babyparse": "^0.4.6",
+    "bootbox": "^4.4.0",
+    "bootstrap": "^3.3.7",
+    "glob": "latest",
+    "jquery": "^3.1.1",
+    "minimist": "latest",
+    "xml2js": "^0.4.17",
+    "xmldom": "latest",
+    "xpath": "0.0.23"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.37",
+    "@types/node": "^6.0.55",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "electron-packager": "latest",
+    "gulp": "^3.9.1",
+    "gulp-concat": "latest",
+    "gulp-html-tag-include": "latest",
+    "gulp-preprocess": "latest",
+    "gulp-typescript": "^3.1.3",
+    "source-map-loader": "^0.1.5",
+    "typescript": "latest",
+    "webpack": "^1.14.0"
+  }
+}
