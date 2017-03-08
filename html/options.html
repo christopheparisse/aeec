@@ -1,0 +1,268 @@
+<!--
+    Options for Tools and Convert commands
+-->
+<div id="tools-options" class="blocs">
+    <div id="head-toolsoptions-title">
+        <button type="button" class="close" onclick="$('#tools-options').hide();" title="Hide tools"><span class="closespan">&times;</span></button>
+        <h4 id="toolsoptions-title"><i class="fa fa-cog" title="Commandes/options"></i> Commandes/options: conversion/recherche/lexique</h4>
+    </div>
+    <div id="details-options container-fluid">
+        <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+                <li id="tconvert" role="presentation" class="active"><a href="#pconvert" aria-controls="pconvert" role="tab" data-toggle="tab">
+                    <i class="fa fa-legal"></i><span id="ppconvert"> Conversions</span></a></li>
+                <li id="tsearch" role="presentation"><a href="#psearch" aria-controls="psearch" role="tab" data-toggle="tab">
+                    <i class="fa fa-search"></i><span id="ppsearch"> Recherche</span></a></li>
+                <li id="texport" role="presentation"><a href="#pexport" aria-controls="pexport" role="tab" data-toggle="tab">
+                    <i class="fa fa-chevron-circle-up"></i><span id="ppexport"> Export</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <!-- PANEL FOR CONVERT -->
+                <div role="tabpanel" class="tab-pane active" id="pconvert"><br/>
+                    <div class="row">
+                        <div class="col-xs-2 col-md-2">
+                            <input name="cvt-command" id="cvt-tei" type="radio" value="0" checked="checked" />
+                                &nbsp;<img class="imgicon" title="vers TEI" src="css/TEI.png"></img>
+                                <label for="cvt-clan" >&nbsp;<span id="pcvt-tei" title="">TEI</span></label>
+                        </div>
+                        <div class="col-xs-2 col-md-2">
+                            <input name="cvt-command" id="cvt-clan" type="radio" value="1" />
+                                &nbsp;<img class="imgicon" title="vers Clan" src="css/Clan.png"></img>
+                                <label for="cvt-clan" ><span id="pcvt-clan" title="">CLAN</span></label>
+                        </div>
+                        <div class="col-xs-2 col-md-2">
+                            <input name="cvt-command" id="cvt-elan" type="radio" value="2" />
+                                &nbsp;<img class="imgicon" title="vers Elan" src="css/Elan.png"></img>
+                                <label for="cvt-elan" ><span id="pcvt-elan" title="">ELAN</span></label>
+                        </div>
+                        <div class="col-xs-2 col-md-2">
+                            <input name="cvt-command" id="cvt-praat" type="radio" value="3" />
+                                <label for="cvt-praat" >&nbsp;<span id="pcvt-praat" title="">Praat</span></label>
+                        </div>
+                        <div class="col-xs-2 col-md-2">
+                            <input name="cvt-command" id="cvt-trs" type="radio" value="4" />
+                                <label for="cvt-trs" >&nbsp;<span id="pcvt-trs" title="">Transcriber</span></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="cvt-accept-tiers"><span id='pcvt-accept-tiers'>Tiers à inclure (caractères génériques acceptés): </span></label>
+                            <input name="cvt-accept-tiers" id="cvt-accept-tiers" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="cvt-suppress-tiers"><span id='pcvt-suppress-tiers'>Tiers à supprimer (caractères génériques acceptés): </span></label>
+                            <input name="cvt-suppress-tiers" id="cvt-suppress-tiers" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9"><label for="cvt-tiers-level"><span id='pcvt-tiers-level'>Niveau d'imbrication: </span></label>
+                            <select class="" id="cvt-tiers-level">
+                                <option value="0">Tous</option>
+                                <option value="1">Lignes principales</option>
+                                <option value="2">Lignes secondaires</option>
+                                <option value="3">Lignes de niveau 3 et au delà</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9"><label for="cvt-tiers-normalize"><span id='pcvt-tiers-normalize'>Normalisation depuis un certain format: </span></label>
+                            <select class="" id="cvt-tiers-normalize">
+                                <option value="none">Aucune</option>
+                                <option value="clan">CLAN</option>
+                                <option value="pfc">PFC (à faire)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9"><label for="cvt-tiers-target"><span id='pcvt-tiers-target'>Normalisation du format destination: </span></label>
+                            <select class="" id="cvt-tiers-target">
+                                <option value="none">Aucune</option>
+                                <option value="clan">CLAN</option>
+                                <option value="pfc">Praat</option>
+                            </select>
+                        </div>
+                    </div>
+                    -->
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="cvt-text-rawline"><span id='pcvt-text-rawline'>Texte brut sans marques de l'oral</span></label>
+                            <input name="cvt-text-rawline" id="cvt-text-rawline" type="checkbox" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="convert-praat-options"><span id='pconvert-praat-options'>Demander les paramètres pour les fichiers praat</span></label>
+                            <input name="convert-praat-options" id="convert-praat-options" type="checkbox" />
+                        </div>
+                    </div>
+                    <div id="praat-options">
+                        <div class="row">
+                            <div class="col-xs-9 col-md-9">
+                                <div id="convert-paramspraat" class="param">
+                                    <div id="convert-praatlist" class="param"></div>
+                                    <div id="convert-praatresp"><span>Relations choisies</span></div>
+                                    <div id="convert-praatrules" class="param"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-md-4">
+                                <button class="btn btn-warning btn-sm btn-block" id="reload-praat-options">Recharger tous les paramètres</button>
+                            </div>
+                            <div class="col-xs-4 col-md-4">
+                                <button class="btn btn-warning btn-sm btn-block" id="convert-praat-reset">Réinitialiser tous les paramètres</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 col-md-2">
+                            <button class="btn btn-sm btn-warning" id="cvt-choose-dest">Choisir destination</button>
+                        </div>
+                        <div class="col-xs-2 col-md-2">
+                            <button class="btn btn-sm btn-warning" id="cvt-erase-dest">Effacer</button>
+                        </div>
+                        <div class="col-xs-8 col-md-8">
+                            <span id="cvt-val-dest" class="btn btn-sm btn-info">...</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- PANEL FOR SEARCH -->
+                <div role="tabpanel" class="tab-pane" id="psearch"><br/>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4">
+                            <input name="search-command" id="search-kwic" type="radio" value="0" checked="checked" />
+                                <label for="search-kwic" >&nbsp;<span id="psearch-kwic" title="">KWIC</span></label>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <input name="search-command" id="search-cooc" type="radio" value="1" />
+                                <label for="search-cooc" >&nbsp;<span id="psearch-cooc" title="">COOCCURENCES</span></label>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <input name="search-command" id="search-lex" type="radio" value="2" />
+                                <label for="search-lex" >&nbsp;<span id="psearch-lex" title="">LEXIQUE</span></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="search-string"><span id='psearch-string'>Valeur(s) à rechercher: </span></label>
+                            <input name="search-string" id="search-string" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="search-tiers"><span id='psearch-tiers'>Noms des tiers à fouiller: </span></label>
+                            <input name="search-tiers" id="search-tiers" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="kwic-width"><span id='pkwic-width'>Taille des concordances KWIC: </span></label>
+                            <input name="kwic-width" id="kwic-width" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="ignore-case"><span id='pignore-case'>Ignorer minuscule/majuscule</span></label>
+                            <input name="ignore-case" id="ignore-case" type="checkbox" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="all-data"><span id='pall-data'>Chercher dans tout le tier</span></label>
+                            <input name="all-data" id="all-data" type="checkbox" />
+                        </div>
+                    </div>
+                </div>
+                <!-- PANEL FOR EXPORT -->
+                <div role="tabpanel" class="tab-pane" id="pexport"><br/>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4">
+                            <input name="export-command" id="export-txm" type="radio" value="0" checked="checked" />
+                                &nbsp;<img class="imgicon" title="vers TXM" src="css/TXM.png"></img>
+                                <label for="export-txm" >&nbsp;<span id="pcvt-txm" title="">TXM</span></label>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <input name="export-command" id="export-lexico" type="radio" value="1" />
+                                &nbsp;<img class="imgicon" title="vers Lexico" src="css/Trameur.png"></img>
+                                <label for="export-lexico" ><span id="pcvt-lexico" title="">Lexico/Le Trameur</span></label>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <input name="export-command" id="export-iramuteq" type="radio" value="2" />
+                                &nbsp;<img class="imgicon" title="vers Iramuteq" src="css/Iramuteq.png"></img>
+                                <label for="export-iramuteq" ><span id="pcvt-iramuteq" title="">Iramuteq</span></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="export-accept-tiers"><span id='pexport-accept-tiers'>Tiers à inclure (caractères génériques acceptés): </span></label>
+                            <input name="export-accept-tiers" id="export-accept-tiers" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="export-suppress-tiers"><span id='pexport-suppress-tiers'>Tiers à supprimer (caractères génériques acceptés): </span></label>
+                            <input name="export-suppress-tiers" id="export-suppress-tiers" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9"><label for="export-tiers-normalize"><span id='pexport-tiers-tnormalize'>Normalisation depuis un certain format: </span></label>
+                            <select class="" id="export-tiers-normalize">
+                                <option value="none">Aucune</option>
+                                <option value="clan">CLAN</option>
+                                <option value="pfc">PFC (à faire)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="export-text-rawline"><span id='pexport-text-rawline'>Texte brut sans marques de l'oral</span></label>
+                            <input name="export-text-rawline" id="export-text-rawline" type="checkbox" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-md-3">
+                            <label for="export-tv-type"><span id='pexport-tv-type'>Type</span></label>
+                            <input name="export-tv-type" id="export-tv-type" />
+                        </div>
+                        <div class="col-xs-3 col-md-3">
+                            <label for="export-tv-val"><span id='pexport-tv-val'>Valeur</span></label>
+                            <input name="export-tv-val" id="export-tv-val" />
+                        </div>
+                        <div class="col-xs-3 col-md-3">
+                            <button class="btn btn-sm btn-warning" id="export-tv-button"><span id='pexport-tv'>Insère/supprime de l'export</span></button>
+                        </div>
+                        <div class="col-xs-3 col-md-3">
+                            <button class="btn btn-sm btn-warning" id="export-tv-reset"><span id='pexport-tv-reset'>Remise à zéro des champs</span></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <span id="export-tv-display"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-md-9">
+                            <label for="export-section"><span id='ptxm-section'>Insère champ section dans l'export</span></label>
+                            <input name="export-section" id="export-section" type="checkbox" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-md-3">
+                            <button class="btn btn-warning" id="export-choose-dest">Choisir destination</button>
+                        </div>
+                        <div class="col-xs-9 col-md-9">
+                            <span id="export-val-dest" class="btn btn-info">...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="startbloc">
+                <button class="btn btn-primary btn-block" id="startcmd">Démarrer la commande</button>
+            </div>
+        </div>
+    </div>
+</div>

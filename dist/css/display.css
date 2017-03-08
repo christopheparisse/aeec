@@ -1,0 +1,89 @@
+/*
+nice colors:
+#f70834
+#f50a5c
+#932bd4
+#33c2cc
+*/
+
+#palette {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    z-index: 100;
+    background: #FFF;
+}
+#endpalette {
+    width: 100%;
+    margin-top: 40px;
+}
+.blocs {
+    border: 1px solid mediumblue;
+    margin: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+	border-radius: 3px;
+}
+#corpus-title {
+    color: blue;
+}
+.num { 
+    color:blue; 
+    text-align: center; 
+    font-weight: bold;
+}
+#maincorpus {
+    width: "100%";
+    border: 1px solid #F0F;
+    border-collapse: collapse;
+}
+#maincorpus .select {
+    background-color: lightcyan;
+}
+tbody, th, td {
+    border: 1px solid #000;
+}
+.imgicon {
+    height: 15px;
+    width: 15px;
+}
+.blocicons {
+    display: inline-block;
+    border: 1px solid blue;
+    padding: 2px;
+    margin: 2px;
+}
+.colored {
+    color: brown;
+    background-color: lightgreen;
+}
+.closespan {
+    color: red;
+    border: 2px solid red;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+	border-radius: 2px;
+}
+
+.startbloc {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#praat-options {
+    border: 1px solid brown;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 2px;
+}
+/*
+.select-editable { position:relative; background-color:white; border:solid grey 1px;  width:120px; height:18px; }
+.select-editable select { position:absolute; top:0px; left:0px; font-size:14px; border:none; width:120px; margin:0; }
+.select-editable input { position:absolute; top:0px; left:0px; width:100px; padding:1px; font-size:12px; border:none; }
+.select-editable select:focus, .select-editable input:focus { outline:none; }
+*/

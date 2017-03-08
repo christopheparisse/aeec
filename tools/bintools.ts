@@ -7,16 +7,19 @@ let os = require('os');
 export var bintools = {
     binLoc: function () {
         var htmlTrjsPath;
-        //console.log("! global appTarget type " + global['applicationTarget_type']);
-        //console.log('! __dirname', __dirname);
-        //console.log('! process', process.cwd());
-        //console.log('! OS', os.platform(), os.arch());
+        console.log("! global appTarget type " + global['applicationTarget_type']);
+        console.log('! __dirname', __dirname);
+        console.log('! process', process.cwd());
+        console.log('! OS', os.platform(), os.arch());
         if (global['applicationTargetType'] !== undefined && global['applicationTargetType'] === 'webpack') {
-            htmlTrjsPath = process.cwd().replace(/\\/g, '/') + "/dist/tools/bin";
+            htmlTrjsPath = process.cwd().replace(/\\/g, '/') + "/../bin";
+            console.log('cas1= ' + htmlTrjsPath);
         } else if (__dirname !== undefined) {
-            htmlTrjsPath = __dirname.replace(/\\/g, '/') + "/bin";
+            htmlTrjsPath = __dirname.replace(/\\/g, '/') + "/../bin";
+            console.log('cas2= ' + htmlTrjsPath);
         } else {
-            htmlTrjsPath = process.cwd().replace(/\\/g, '/') + "/tools/bin";
+            htmlTrjsPath = process.cwd().replace(/\\/g, '/') + "/bin";
+            console.log('cas3= ' + htmlTrjsPath);
         }
         // console.log('path= ' + htmlTrjsPath);
         return htmlTrjsPath;

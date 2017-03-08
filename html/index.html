@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device=width,initial-scale=1">
+	<link rel="shortcut icon" type="image/ico" href="../favicon.ico"> -->
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<title></title>
+    <script src="lib/sorttable.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/tables.css">
+	<link rel="stylesheet" type="text/css" href="css/display.css">
+ </head>
+<body>
+	<include src="palette.html"></include>
+	<div id="endpalette"></div>
+	<include src="options.html"></include>
+	<div id="content" class="blocs">
+		<div id="head-corpus-title">
+			<button type="button" class="close" onclick="$('#content').hide();" title="Hide content"><span class="closespan">&times;</span></button>
+			<h4 id="all-corpus-title"><i class="fa fa-bars" title="Commandes/options"></i> Corpus: <span id="corpus-title"></span></h4>
+		</div>
+		<table id="maincorpus" class="pure-table sortable">
+    	</table>
+	</div>
+	<div id="tools-results" class="blocs">
+		<div id="head-toolsresults-title">
+			<button type="button" class="close" onclick="$('#tools-results').hide();" title="Hide results"><span class="closespan">&times;</span></button>
+			<h4 id="toolsresult-title"><i class="fa fa-book" title="Commandes/options"></i> Résultats commandes</h4>
+		</div>
+		<div id="details-results">
+		</div>
+	</div>
+	<div id="epilogue">
+	</div>
+	<script type="text/javascript" language="javascript">
+		window.$ = window.jQuery = require('jquery');
+		require('bootstrap');
+		var aeec = require('./aeec/init.js');
+		var params = require('./aeec/params.js');
+		aeec.init();
+	</script>
+</body>
+</html>
